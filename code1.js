@@ -33,6 +33,12 @@ gdjs.HauptMen_252Code.GDSnowObjects1= [];
 gdjs.HauptMen_252Code.GDSnowObjects2= [];
 gdjs.HauptMen_252Code.GDPlanetBlockObjects1= [];
 gdjs.HauptMen_252Code.GDPlanetBlockObjects2= [];
+gdjs.HauptMen_252Code.GDLeftArrowRoundButtonObjects1= [];
+gdjs.HauptMen_252Code.GDLeftArrowRoundButtonObjects2= [];
+gdjs.HauptMen_252Code.GDRightArrowRoundButtonObjects1= [];
+gdjs.HauptMen_252Code.GDRightArrowRoundButtonObjects2= [];
+gdjs.HauptMen_252Code.GDTopArrowRoundButtonObjects1= [];
+gdjs.HauptMen_252Code.GDTopArrowRoundButtonObjects2= [];
 gdjs.HauptMen_252Code.GDNewTextObjects1= [];
 gdjs.HauptMen_252Code.GDNewTextObjects2= [];
 gdjs.HauptMen_252Code.GDNewText2Objects1= [];
@@ -43,12 +49,15 @@ gdjs.HauptMen_252Code.GDNewSprite2Objects1= [];
 gdjs.HauptMen_252Code.GDNewSprite2Objects2= [];
 gdjs.HauptMen_252Code.GDNewSprite3Objects1= [];
 gdjs.HauptMen_252Code.GDNewSprite3Objects2= [];
+gdjs.HauptMen_252Code.GDStartObjects1= [];
+gdjs.HauptMen_252Code.GDStartObjects2= [];
 
 gdjs.HauptMen_252Code.conditionTrue_0 = {val:false};
 gdjs.HauptMen_252Code.condition0IsTrue_0 = {val:false};
 gdjs.HauptMen_252Code.condition1IsTrue_0 = {val:false};
 
 
+gdjs.HauptMen_252Code.mapOfGDgdjs_46HauptMen_95252Code_46GDStartObjects1Objects = Hashtable.newFrom({"Start": gdjs.HauptMen_252Code.GDStartObjects1});
 gdjs.HauptMen_252Code.eventsList0 = function(runtimeScene) {
 
 {
@@ -57,6 +66,20 @@ gdjs.HauptMen_252Code.eventsList0 = function(runtimeScene) {
 gdjs.HauptMen_252Code.condition0IsTrue_0.val = false;
 {
 gdjs.HauptMen_252Code.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
+}if (gdjs.HauptMen_252Code.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level1", false);
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.HauptMen_252Code.GDStartObjects1);
+
+gdjs.HauptMen_252Code.condition0IsTrue_0.val = false;
+{
+gdjs.HauptMen_252Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.HauptMen_252Code.mapOfGDgdjs_46HauptMen_95252Code_46GDStartObjects1Objects, runtimeScene, true, false);
 }if (gdjs.HauptMen_252Code.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level1", false);
 }}
@@ -103,6 +126,12 @@ gdjs.HauptMen_252Code.GDSnowObjects1.length = 0;
 gdjs.HauptMen_252Code.GDSnowObjects2.length = 0;
 gdjs.HauptMen_252Code.GDPlanetBlockObjects1.length = 0;
 gdjs.HauptMen_252Code.GDPlanetBlockObjects2.length = 0;
+gdjs.HauptMen_252Code.GDLeftArrowRoundButtonObjects1.length = 0;
+gdjs.HauptMen_252Code.GDLeftArrowRoundButtonObjects2.length = 0;
+gdjs.HauptMen_252Code.GDRightArrowRoundButtonObjects1.length = 0;
+gdjs.HauptMen_252Code.GDRightArrowRoundButtonObjects2.length = 0;
+gdjs.HauptMen_252Code.GDTopArrowRoundButtonObjects1.length = 0;
+gdjs.HauptMen_252Code.GDTopArrowRoundButtonObjects2.length = 0;
 gdjs.HauptMen_252Code.GDNewTextObjects1.length = 0;
 gdjs.HauptMen_252Code.GDNewTextObjects2.length = 0;
 gdjs.HauptMen_252Code.GDNewText2Objects1.length = 0;
@@ -113,6 +142,8 @@ gdjs.HauptMen_252Code.GDNewSprite2Objects1.length = 0;
 gdjs.HauptMen_252Code.GDNewSprite2Objects2.length = 0;
 gdjs.HauptMen_252Code.GDNewSprite3Objects1.length = 0;
 gdjs.HauptMen_252Code.GDNewSprite3Objects2.length = 0;
+gdjs.HauptMen_252Code.GDStartObjects1.length = 0;
+gdjs.HauptMen_252Code.GDStartObjects2.length = 0;
 
 gdjs.HauptMen_252Code.eventsList0(runtimeScene);
 
