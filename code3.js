@@ -9,8 +9,6 @@ gdjs.GameEndCode.GDSmallBridgeObjects1= [];
 gdjs.GameEndCode.GDSmallBridgeObjects2= [];
 gdjs.GameEndCode.GDCoinObjects1= [];
 gdjs.GameEndCode.GDCoinObjects2= [];
-gdjs.GameEndCode.GDScoreObjects1= [];
-gdjs.GameEndCode.GDScoreObjects2= [];
 gdjs.GameEndCode.GDLeftObjects1= [];
 gdjs.GameEndCode.GDLeftObjects2= [];
 gdjs.GameEndCode.GDRightObjects1= [];
@@ -21,6 +19,8 @@ gdjs.GameEndCode.GDBeeObjects1= [];
 gdjs.GameEndCode.GDBeeObjects2= [];
 gdjs.GameEndCode.GDSlimeObjects1= [];
 gdjs.GameEndCode.GDSlimeObjects2= [];
+gdjs.GameEndCode.GDScoreObjects1= [];
+gdjs.GameEndCode.GDScoreObjects2= [];
 gdjs.GameEndCode.GDFlyObjects1= [];
 gdjs.GameEndCode.GDFlyObjects2= [];
 gdjs.GameEndCode.GDHornSlimeObjects1= [];
@@ -39,16 +39,20 @@ gdjs.GameEndCode.GDRightArrowRoundButtonObjects1= [];
 gdjs.GameEndCode.GDRightArrowRoundButtonObjects2= [];
 gdjs.GameEndCode.GDTopArrowRoundButtonObjects1= [];
 gdjs.GameEndCode.GDTopArrowRoundButtonObjects2= [];
-gdjs.GameEndCode.GDNewTextObjects1= [];
-gdjs.GameEndCode.GDNewTextObjects2= [];
-gdjs.GameEndCode.GDNewText2Objects1= [];
-gdjs.GameEndCode.GDNewText2Objects2= [];
+gdjs.GameEndCode.GDStartObjects1= [];
+gdjs.GameEndCode.GDStartObjects2= [];
 gdjs.GameEndCode.GDCoinObjects1= [];
 gdjs.GameEndCode.GDCoinObjects2= [];
 gdjs.GameEndCode.GDPlayerObjects1= [];
 gdjs.GameEndCode.GDPlayerObjects2= [];
+gdjs.GameEndCode.GDNewTextObjects1= [];
+gdjs.GameEndCode.GDNewTextObjects2= [];
+gdjs.GameEndCode.GDNewText2Objects1= [];
+gdjs.GameEndCode.GDNewText2Objects2= [];
 gdjs.GameEndCode.GDSlimeObjects1= [];
 gdjs.GameEndCode.GDSlimeObjects2= [];
+gdjs.GameEndCode.GDPlayAgainObjects1= [];
+gdjs.GameEndCode.GDPlayAgainObjects2= [];
 
 gdjs.GameEndCode.conditionTrue_0 = {val:false};
 gdjs.GameEndCode.condition0IsTrue_0 = {val:false};
@@ -77,6 +81,51 @@ gdjs.copyArray(runtimeScene.getObjects("Slime"), gdjs.GameEndCode.GDSlimeObjects
 }
 
 
+{
+
+
+gdjs.GameEndCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameEndCode.condition0IsTrue_0.val = gdjs.evtTools.systemInfo.isMobile();
+}if (gdjs.GameEndCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("PlayAgain"), gdjs.GameEndCode.GDPlayAgainObjects1);
+{for(var i = 0, len = gdjs.GameEndCode.GDPlayAgainObjects1.length ;i < len;++i) {
+    gdjs.GameEndCode.GDPlayAgainObjects1[i].deleteFromScene(runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+
+gdjs.GameEndCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameEndCode.condition0IsTrue_0.val = !(gdjs.evtTools.systemInfo.isMobile());
+}if (gdjs.GameEndCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.GameEndCode.GDStartObjects1);
+{for(var i = 0, len = gdjs.GameEndCode.GDStartObjects1.length ;i < len;++i) {
+    gdjs.GameEndCode.GDStartObjects1[i].deleteFromScene(runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+
+gdjs.GameEndCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameEndCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
+}if (gdjs.GameEndCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level1", false);
+}}
+
+}
+
+
 };
 
 gdjs.GameEndCode.func = function(runtimeScene) {
@@ -92,8 +141,6 @@ gdjs.GameEndCode.GDSmallBridgeObjects1.length = 0;
 gdjs.GameEndCode.GDSmallBridgeObjects2.length = 0;
 gdjs.GameEndCode.GDCoinObjects1.length = 0;
 gdjs.GameEndCode.GDCoinObjects2.length = 0;
-gdjs.GameEndCode.GDScoreObjects1.length = 0;
-gdjs.GameEndCode.GDScoreObjects2.length = 0;
 gdjs.GameEndCode.GDLeftObjects1.length = 0;
 gdjs.GameEndCode.GDLeftObjects2.length = 0;
 gdjs.GameEndCode.GDRightObjects1.length = 0;
@@ -104,6 +151,8 @@ gdjs.GameEndCode.GDBeeObjects1.length = 0;
 gdjs.GameEndCode.GDBeeObjects2.length = 0;
 gdjs.GameEndCode.GDSlimeObjects1.length = 0;
 gdjs.GameEndCode.GDSlimeObjects2.length = 0;
+gdjs.GameEndCode.GDScoreObjects1.length = 0;
+gdjs.GameEndCode.GDScoreObjects2.length = 0;
 gdjs.GameEndCode.GDFlyObjects1.length = 0;
 gdjs.GameEndCode.GDFlyObjects2.length = 0;
 gdjs.GameEndCode.GDHornSlimeObjects1.length = 0;
@@ -122,16 +171,20 @@ gdjs.GameEndCode.GDRightArrowRoundButtonObjects1.length = 0;
 gdjs.GameEndCode.GDRightArrowRoundButtonObjects2.length = 0;
 gdjs.GameEndCode.GDTopArrowRoundButtonObjects1.length = 0;
 gdjs.GameEndCode.GDTopArrowRoundButtonObjects2.length = 0;
-gdjs.GameEndCode.GDNewTextObjects1.length = 0;
-gdjs.GameEndCode.GDNewTextObjects2.length = 0;
-gdjs.GameEndCode.GDNewText2Objects1.length = 0;
-gdjs.GameEndCode.GDNewText2Objects2.length = 0;
+gdjs.GameEndCode.GDStartObjects1.length = 0;
+gdjs.GameEndCode.GDStartObjects2.length = 0;
 gdjs.GameEndCode.GDCoinObjects1.length = 0;
 gdjs.GameEndCode.GDCoinObjects2.length = 0;
 gdjs.GameEndCode.GDPlayerObjects1.length = 0;
 gdjs.GameEndCode.GDPlayerObjects2.length = 0;
+gdjs.GameEndCode.GDNewTextObjects1.length = 0;
+gdjs.GameEndCode.GDNewTextObjects2.length = 0;
+gdjs.GameEndCode.GDNewText2Objects1.length = 0;
+gdjs.GameEndCode.GDNewText2Objects2.length = 0;
 gdjs.GameEndCode.GDSlimeObjects1.length = 0;
 gdjs.GameEndCode.GDSlimeObjects2.length = 0;
+gdjs.GameEndCode.GDPlayAgainObjects1.length = 0;
+gdjs.GameEndCode.GDPlayAgainObjects2.length = 0;
 
 gdjs.GameEndCode.eventsList0(runtimeScene);
 

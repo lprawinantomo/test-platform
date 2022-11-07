@@ -9,8 +9,6 @@ gdjs.Level2Code.GDSmallBridgeObjects1= [];
 gdjs.Level2Code.GDSmallBridgeObjects2= [];
 gdjs.Level2Code.GDCoinObjects1= [];
 gdjs.Level2Code.GDCoinObjects2= [];
-gdjs.Level2Code.GDScoreObjects1= [];
-gdjs.Level2Code.GDScoreObjects2= [];
 gdjs.Level2Code.GDLeftObjects1= [];
 gdjs.Level2Code.GDLeftObjects2= [];
 gdjs.Level2Code.GDRightObjects1= [];
@@ -21,6 +19,8 @@ gdjs.Level2Code.GDBeeObjects1= [];
 gdjs.Level2Code.GDBeeObjects2= [];
 gdjs.Level2Code.GDSlimeObjects1= [];
 gdjs.Level2Code.GDSlimeObjects2= [];
+gdjs.Level2Code.GDScoreObjects1= [];
+gdjs.Level2Code.GDScoreObjects2= [];
 gdjs.Level2Code.GDFlyObjects1= [];
 gdjs.Level2Code.GDFlyObjects2= [];
 gdjs.Level2Code.GDHornSlimeObjects1= [];
@@ -39,10 +39,14 @@ gdjs.Level2Code.GDRightArrowRoundButtonObjects1= [];
 gdjs.Level2Code.GDRightArrowRoundButtonObjects2= [];
 gdjs.Level2Code.GDTopArrowRoundButtonObjects1= [];
 gdjs.Level2Code.GDTopArrowRoundButtonObjects2= [];
+gdjs.Level2Code.GDStartObjects1= [];
+gdjs.Level2Code.GDStartObjects2= [];
 gdjs.Level2Code.GDHiddenObjects1= [];
 gdjs.Level2Code.GDHiddenObjects2= [];
 gdjs.Level2Code.GDExtraObjects1= [];
 gdjs.Level2Code.GDExtraObjects2= [];
+gdjs.Level2Code.GDNewSpriteObjects1= [];
+gdjs.Level2Code.GDNewSpriteObjects2= [];
 
 gdjs.Level2Code.conditionTrue_0 = {val:false};
 gdjs.Level2Code.condition0IsTrue_0 = {val:false};
@@ -65,6 +69,7 @@ gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDCheckpointObjects1Objects = Hashtab
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDRightArrowRoundButtonObjects1Objects = Hashtable.newFrom({"RightArrowRoundButton": gdjs.Level2Code.GDRightArrowRoundButtonObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDLeftArrowRoundButtonObjects1Objects = Hashtable.newFrom({"LeftArrowRoundButton": gdjs.Level2Code.GDLeftArrowRoundButtonObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDTopArrowRoundButtonObjects1Objects = Hashtable.newFrom({"TopArrowRoundButton": gdjs.Level2Code.GDTopArrowRoundButtonObjects1});
+gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDStartObjects1Objects = Hashtable.newFrom({"Start": gdjs.Level2Code.GDStartObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDPlayerObjects1Objects = Hashtable.newFrom({"Player": gdjs.Level2Code.GDPlayerObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDNextlevelObjects1Objects = Hashtable.newFrom({"Nextlevel": gdjs.Level2Code.GDNextlevelObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDPlayerObjects1Objects = Hashtable.newFrom({"Player": gdjs.Level2Code.GDPlayerObjects1});
@@ -698,6 +703,47 @@ gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.Level2Code.GDPlayerObject
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.Level2Code.GDStartObjects1);
+
+gdjs.Level2Code.condition0IsTrue_0.val = false;
+{
+gdjs.Level2Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDStartObjects1Objects, runtimeScene, true, false);
+}if (gdjs.Level2Code.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level1", false);
+}}
+
+}
+
+
+{
+
+
+gdjs.Level2Code.condition0IsTrue_0.val = false;
+{
+gdjs.Level2Code.condition0IsTrue_0.val = !(gdjs.evtTools.systemInfo.isMobile());
+}if (gdjs.Level2Code.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.Level2Code.GDStartObjects1);
+{for(var i = 0, len = gdjs.Level2Code.GDStartObjects1.length ;i < len;++i) {
+    gdjs.Level2Code.GDStartObjects1[i].deleteFromScene(runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+
+{
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.Level2Code.GDPlayerObjects1);
+{gdjs.evtTools.camera.setCameraX(runtimeScene, (( gdjs.Level2Code.GDPlayerObjects1.length === 0 ) ? 0 :gdjs.Level2Code.GDPlayerObjects1[0].getPointX("")) * 0.1, "cloud", 0);
+}}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("Nextlevel"), gdjs.Level2Code.GDNextlevelObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.Level2Code.GDPlayerObjects1);
 
@@ -741,8 +787,6 @@ gdjs.Level2Code.GDSmallBridgeObjects1.length = 0;
 gdjs.Level2Code.GDSmallBridgeObjects2.length = 0;
 gdjs.Level2Code.GDCoinObjects1.length = 0;
 gdjs.Level2Code.GDCoinObjects2.length = 0;
-gdjs.Level2Code.GDScoreObjects1.length = 0;
-gdjs.Level2Code.GDScoreObjects2.length = 0;
 gdjs.Level2Code.GDLeftObjects1.length = 0;
 gdjs.Level2Code.GDLeftObjects2.length = 0;
 gdjs.Level2Code.GDRightObjects1.length = 0;
@@ -753,6 +797,8 @@ gdjs.Level2Code.GDBeeObjects1.length = 0;
 gdjs.Level2Code.GDBeeObjects2.length = 0;
 gdjs.Level2Code.GDSlimeObjects1.length = 0;
 gdjs.Level2Code.GDSlimeObjects2.length = 0;
+gdjs.Level2Code.GDScoreObjects1.length = 0;
+gdjs.Level2Code.GDScoreObjects2.length = 0;
 gdjs.Level2Code.GDFlyObjects1.length = 0;
 gdjs.Level2Code.GDFlyObjects2.length = 0;
 gdjs.Level2Code.GDHornSlimeObjects1.length = 0;
@@ -771,10 +817,14 @@ gdjs.Level2Code.GDRightArrowRoundButtonObjects1.length = 0;
 gdjs.Level2Code.GDRightArrowRoundButtonObjects2.length = 0;
 gdjs.Level2Code.GDTopArrowRoundButtonObjects1.length = 0;
 gdjs.Level2Code.GDTopArrowRoundButtonObjects2.length = 0;
+gdjs.Level2Code.GDStartObjects1.length = 0;
+gdjs.Level2Code.GDStartObjects2.length = 0;
 gdjs.Level2Code.GDHiddenObjects1.length = 0;
 gdjs.Level2Code.GDHiddenObjects2.length = 0;
 gdjs.Level2Code.GDExtraObjects1.length = 0;
 gdjs.Level2Code.GDExtraObjects2.length = 0;
+gdjs.Level2Code.GDNewSpriteObjects1.length = 0;
+gdjs.Level2Code.GDNewSpriteObjects2.length = 0;
 
 gdjs.Level2Code.eventsList0(runtimeScene);
 

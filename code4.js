@@ -9,8 +9,6 @@ gdjs.GameOverCode.GDSmallBridgeObjects1= [];
 gdjs.GameOverCode.GDSmallBridgeObjects2= [];
 gdjs.GameOverCode.GDCoinObjects1= [];
 gdjs.GameOverCode.GDCoinObjects2= [];
-gdjs.GameOverCode.GDScoreObjects1= [];
-gdjs.GameOverCode.GDScoreObjects2= [];
 gdjs.GameOverCode.GDLeftObjects1= [];
 gdjs.GameOverCode.GDLeftObjects2= [];
 gdjs.GameOverCode.GDRightObjects1= [];
@@ -21,6 +19,8 @@ gdjs.GameOverCode.GDBeeObjects1= [];
 gdjs.GameOverCode.GDBeeObjects2= [];
 gdjs.GameOverCode.GDSlimeObjects1= [];
 gdjs.GameOverCode.GDSlimeObjects2= [];
+gdjs.GameOverCode.GDScoreObjects1= [];
+gdjs.GameOverCode.GDScoreObjects2= [];
 gdjs.GameOverCode.GDFlyObjects1= [];
 gdjs.GameOverCode.GDFlyObjects2= [];
 gdjs.GameOverCode.GDHornSlimeObjects1= [];
@@ -39,6 +39,8 @@ gdjs.GameOverCode.GDRightArrowRoundButtonObjects1= [];
 gdjs.GameOverCode.GDRightArrowRoundButtonObjects2= [];
 gdjs.GameOverCode.GDTopArrowRoundButtonObjects1= [];
 gdjs.GameOverCode.GDTopArrowRoundButtonObjects2= [];
+gdjs.GameOverCode.GDStartObjects1= [];
+gdjs.GameOverCode.GDStartObjects2= [];
 gdjs.GameOverCode.GDGameOverObjects1= [];
 gdjs.GameOverCode.GDGameOverObjects2= [];
 gdjs.GameOverCode.GDItsOkObjects1= [];
@@ -49,6 +51,7 @@ gdjs.GameOverCode.condition0IsTrue_0 = {val:false};
 gdjs.GameOverCode.condition1IsTrue_0 = {val:false};
 
 
+gdjs.GameOverCode.mapOfGDgdjs_46GameOverCode_46GDStartObjects1Objects = Hashtable.newFrom({"Start": gdjs.GameOverCode.GDStartObjects1});
 gdjs.GameOverCode.eventsList0 = function(runtimeScene) {
 
 {
@@ -86,6 +89,52 @@ gdjs.GameOverCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runt
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.GameOverCode.GDStartObjects1);
+
+gdjs.GameOverCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameOverCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.GameOverCode.mapOfGDgdjs_46GameOverCode_46GDStartObjects1Objects, runtimeScene, true, false);
+}if (gdjs.GameOverCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level1", false);
+}}
+
+}
+
+
+{
+
+
+gdjs.GameOverCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameOverCode.condition0IsTrue_0.val = gdjs.evtTools.systemInfo.isMobile();
+}if (gdjs.GameOverCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("ItsOk"), gdjs.GameOverCode.GDItsOkObjects1);
+{for(var i = 0, len = gdjs.GameOverCode.GDItsOkObjects1.length ;i < len;++i) {
+    gdjs.GameOverCode.GDItsOkObjects1[i].deleteFromScene(runtimeScene);
+}
+}}
+
+}
+
+
+{
+
+
+gdjs.GameOverCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameOverCode.condition0IsTrue_0.val = !(gdjs.evtTools.systemInfo.isMobile());
+}if (gdjs.GameOverCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.GameOverCode.GDStartObjects1);
+{for(var i = 0, len = gdjs.GameOverCode.GDStartObjects1.length ;i < len;++i) {
+    gdjs.GameOverCode.GDStartObjects1[i].deleteFromScene(runtimeScene);
+}
+}}
+
+}
+
+
+{
+
 
 {
 }
@@ -108,8 +157,6 @@ gdjs.GameOverCode.GDSmallBridgeObjects1.length = 0;
 gdjs.GameOverCode.GDSmallBridgeObjects2.length = 0;
 gdjs.GameOverCode.GDCoinObjects1.length = 0;
 gdjs.GameOverCode.GDCoinObjects2.length = 0;
-gdjs.GameOverCode.GDScoreObjects1.length = 0;
-gdjs.GameOverCode.GDScoreObjects2.length = 0;
 gdjs.GameOverCode.GDLeftObjects1.length = 0;
 gdjs.GameOverCode.GDLeftObjects2.length = 0;
 gdjs.GameOverCode.GDRightObjects1.length = 0;
@@ -120,6 +167,8 @@ gdjs.GameOverCode.GDBeeObjects1.length = 0;
 gdjs.GameOverCode.GDBeeObjects2.length = 0;
 gdjs.GameOverCode.GDSlimeObjects1.length = 0;
 gdjs.GameOverCode.GDSlimeObjects2.length = 0;
+gdjs.GameOverCode.GDScoreObjects1.length = 0;
+gdjs.GameOverCode.GDScoreObjects2.length = 0;
 gdjs.GameOverCode.GDFlyObjects1.length = 0;
 gdjs.GameOverCode.GDFlyObjects2.length = 0;
 gdjs.GameOverCode.GDHornSlimeObjects1.length = 0;
@@ -138,6 +187,8 @@ gdjs.GameOverCode.GDRightArrowRoundButtonObjects1.length = 0;
 gdjs.GameOverCode.GDRightArrowRoundButtonObjects2.length = 0;
 gdjs.GameOverCode.GDTopArrowRoundButtonObjects1.length = 0;
 gdjs.GameOverCode.GDTopArrowRoundButtonObjects2.length = 0;
+gdjs.GameOverCode.GDStartObjects1.length = 0;
+gdjs.GameOverCode.GDStartObjects2.length = 0;
 gdjs.GameOverCode.GDGameOverObjects1.length = 0;
 gdjs.GameOverCode.GDGameOverObjects2.length = 0;
 gdjs.GameOverCode.GDItsOkObjects1.length = 0;
